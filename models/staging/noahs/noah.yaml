@@ -1,0 +1,40 @@
+version: 2
+
+sources:
+  - name: noahs
+    meta:
+      external_location: "/Users/gunudiamond/repos/hanukkahofdata/noahs-{identifier}.csv"
+    tables:
+      - name: customers
+      - name: orders
+      - name: orders_items
+      - name: products
+
+models:
+  - name: stg_noah__noahs_customers
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+      - name: name_to_number
+        tests:
+          - not_null
+  - name: stg_noah__noahs_orders
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_noah__noahs_products
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_noah__noahs_orders_items
+    columns:
+      - name: order_item_id
+        tests:
+          - not_null
+          - unique
