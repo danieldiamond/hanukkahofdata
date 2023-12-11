@@ -1,6 +1,13 @@
 SELECT
-    customer_id, first_name, last_name, birthdate, phone
+
+    customer_id,
+    first_name,
+    last_name,
+    birthdate,
+    phone
+
 FROM {{ ref('dim_customer') }}
+
 WHERE citystatezip = (SELECT citystatezip FROM {{ ref('two') }})
     AND year(birthdate) IN (1927, 1939, 1951, 1963, 1975, 1987, 1999, 2011, 2023)
     AND (
