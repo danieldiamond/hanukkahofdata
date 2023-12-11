@@ -17,9 +17,6 @@ models:
         tests:
           - not_null
           - unique
-      - name: name_to_number
-        tests:
-          - not_null
   - name: stg_noah__noahs_orders
     columns:
       - name: order_id

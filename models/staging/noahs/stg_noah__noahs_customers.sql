@@ -9,7 +9,5 @@ SELECT
     timezone,
     lat,
     long,
-    phone,
-    replace(phone,'-','') AS phone_stripped,
-    name_to_number(last_name) AS name_to_number
+    phone
 FROM {{ source('noahs', 'customers') }}

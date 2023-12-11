@@ -9,7 +9,5 @@ SELECT
     timezone,
     lat,
     long,
-    phone,
-    phone_stripped,
-    name_to_number
+    phone
 FROM {{ ref('stg_noah__noahs_customers') }}
