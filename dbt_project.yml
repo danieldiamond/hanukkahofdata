@@ -18,7 +18,5 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   noah:
     +materialized: view
-    staging:
-      +materialized: table
     core:
       +materialized: table
