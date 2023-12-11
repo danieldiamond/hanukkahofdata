@@ -1,0 +1,11 @@
+noah:
+  outputs:
+    dev:
+      type: duckdb
+      path: dev.duckdb
+      threads: 1
+      extensions: [spatial]
+      module_paths: [lib]
+      plugins:
+        - module: udfs
+  target: dev

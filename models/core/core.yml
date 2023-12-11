@@ -1,0 +1,6 @@
+version: 2
+models:
+  - name: dim_customer
+  - name: dim_order
+  - name: dim_product
+  - name: fact_order_item_create
