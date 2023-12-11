@@ -4,4 +4,4 @@
 **/dbt_packages
 dev.duckdb
 package-lock.yml
-.user.yml
+
