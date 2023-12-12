@@ -21,6 +21,13 @@ models:
         tests:
           - not_null
           - unique
+  - name: one_py
+    description: Same as `one` but using dbt python models
+    columns:
+      - name: phone
+        tests:
+          - not_null
+          - unique
   - name: two
     description: >
       ## The Contractor
