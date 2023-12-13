@@ -1,6 +1,6 @@
 SELECT DISTINCT
 
-    c.customer_id,
+    f.customer_id,
     c.first_name,
     c.last_name,
     c.phone,
