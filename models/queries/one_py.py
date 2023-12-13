@@ -1,5 +1,5 @@
 def model(dbt, session):
-    df = dbt.ref("dim_customer").fetchdf()
+    df = dbt.ref("dim_customer").df()
 
     mapping = {
         "ABC": "2",
