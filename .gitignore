@@ -5,3 +5,4 @@
 dev.duckdb
 package-lock.yml
 .user.yml
+run_duck.sh
