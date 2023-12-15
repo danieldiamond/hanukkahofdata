@@ -4,8 +4,7 @@ noah:
       type: duckdb
       path: dev.duckdb
       threads: 1
-      extensions: [spatial]
-      module_paths: [lib]
+      module_paths: [macros]
       plugins:
         - module: udfs
   target: dev
