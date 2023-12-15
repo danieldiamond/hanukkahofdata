@@ -5,7 +5,8 @@ SELECT
     c.last_name,
     c.phone,
     p.product_id,
-    p.description
+    p.description,
+    f.time_ordered
 
 FROM {{ ref('fact_order_item_create') }} AS f
 LEFT JOIN {{ ref('dim_order') }} AS o ON f.order_id = o.order_id

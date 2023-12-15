@@ -15,9 +15,9 @@ def model(dbt, session):
     df["name_to_phone"] = df["last_name"].apply(lambda name: "".join(
         [v for i in name for k, v in mapping.items() if i.upper() in k]
     ))
-    df["phone"] = df["phone"].str.replace('-', '')
+    df["phone_stripped"] = df["phone"].str.replace('-', '')
 
-    df = df[df['phone']==df['name_to_phone']][["phone", "last_name"]]
+    df = df[df['phone_stripped']==df['name_to_phone']][["phone", "last_name"]]
 
     return df
 
