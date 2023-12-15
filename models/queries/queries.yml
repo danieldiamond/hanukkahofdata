@@ -1,5 +1,6 @@
 version: 2
 models:
+  - name: base
   - name: one
     description: >
       ## The Investigator
@@ -118,6 +119,22 @@ models:
       “Well I turned around to see this cute guy holding an item I had bought. He said, ‘I got the same thing!' We laughed about it and wound up swapping items because I wanted the color he got. We had a moment when our eyes met and my heart stopped for a second. I asked him to get some food with me and we spent the rest of the day together.
       “Before long I moved into his place, but the romance faded quickly, as he wasn't the prince I imagined. I left abruptly one night, forgetting the tapestry on his wall. But by then, it symbolized our love, and I wanted nothing more to do with it. For all I know, he still has it.”
       Can you figure out her ex-boyfriend's phone number?
+    tests:
+      - dbt_expectations.expect_table_row_count_to_equal:
+          value: 1
+    columns:
+      - name: phone
+        tests:
+          - not_null
+
+  - name: eight
+    description: >
+      ## The Collector
+      “Oh that damned woman! She moved in, clogged my bathtub, left her coupons all over the kitchen, and then just vanished one night without leaving so much as a note.
+      Except she did leave behind that nasty carpet. I spent months cleaning one corner, only to discover a snake hiding in the branches! I knew then that she was never coming back, and I had to get it out of my sight.
+      “Well, I don't have any storage here, and it didn't seem right to sell it, so I gave it to my sister. She wound up getting a newer and more expensive carpet, so she gave it to an acquaintance of hers who collects all sorts of junk. Apparently he owns an entire set of Noah's collectibles! He probably still has the carpet, even.
+      “My sister is away for the holidays, but I can have her call you in a few weeks.”
+      The family dinner is tonight! Can you find the collector's phone number in time?
     tests:
       - dbt_expectations.expect_table_row_count_to_equal:
           value: 1

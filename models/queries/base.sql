@@ -4,6 +4,7 @@ SELECT
     c.first_name,
     c.last_name,
     c.phone,
+    p.product_id,
     p.description
 
 FROM {{ ref('fact_order_item_create') }} AS f
